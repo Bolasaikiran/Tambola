@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housie numbers piking</title>
+    <style>
+        h1#fin{
+            height:100%;width: 100%
+        }
+        div#numgen{
+            border:2px solid black;width:15%;float:left;margin-left: 80%;margin-top: -30%;height:120px;text-align: center;
+            background-color:rgba(53, 46, 46, 0.708);
+            color: rgba(255, 255, 255, 0.782);
+        }
+        div#main{
+            border: 2px solid black;width: 50%;float : left;margin-left: 20%;margin-top: 2%;height: auto;
+        }
+        div#nineteen,#twenty,#eighteen,#seventeen,#sixteen,#fifteen,#fourteen,#thirteen,#twelve,#eleven,#ten,#nine,#eight,#seven,#six,#five,#four,#three,#two,#one
+        {
+            border: 2px solid black;width: 5%;float: left;margin-left: 4%;margin-top: 2%;text-align: center;margin-bottom: 2%;
+        }
+        div#twentyone,#twentytwo,#twentythree,#twentyfour,#twentyfive,#twentysix,#twentyseven,#twentyeight,#twentynine,#thirty,
+        #thirtyone,#thirtytwo,#thirtythree,#thirtyfour,#thirtyfive,#thirtysix,#thirtyseven,#thirtyeight,#thirtynine,#forty,
+        #fortyone,#fortytwo,#fortythree,#fortyfour,#fortyfive,#fortysix,#fortyseven,#fortyeight,#fortynine,#fifty,
+        #fiftyone,#fiftytwo,#fiftythree,#fiftyfour,#fiftyfive,#fiftysix,#fiftyseven,#fiftyeight,#fiftynine,#sixty,
+        #sixtyone,#sixtytwo,#sixtythree,#sixtyfour,#sixtyfive,#sixtysix,#sixtyseven,#sixtyeight,#sixtynine,#seventy,
+        #seventyone,#seventytwo,#seventythree,#seventyfour,#seventyfive,#seventysix,#seventyseven,#seventyeight,#seventynine,#eighty,
+        #eightyone,#eightytwo,#eightythree,#eightyfour,#eightyfive,#eightysix,#eightyseven,#eightyeight,#eightynine,#ninety
+        {
+
+            border: 2px solid black;width: 5%;float: left;margin-left: 4%;margin-top: 2%;text-align: center;margin-bottom: 2%;
+        }
+        button#but{
+            margin-left: 42%;margin-top: 2%;
+            background-color:lightgreen;
+        }
+        body{
+            background-image: url("https://mobimg.b-cdn.net/v3/fetch/57/57ae4ca43f20c93b8058664a957e4d5c.jpeg");       
+        }        
+    </style>
+    <script>
+        items=['one','two','three','four','five','six','seven','eight','nine','ten',
+        'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty',
+        'twentyone','twentytwo','twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight','twentynine','thirty',
+        'thirtyone','thirtytwo','thirtythree','thirtyfour','thirtyfive','thirtysix','thirtyseven','thirtyeight','thirtynine','forty',
+        'fortyone','fortytwo','fortythree','fortyfour','fortyfive','fortysix','fortyseven','fortyeight','fortynine','fifty',
+        'fiftyone','fiftytwo','fiftythree','fiftyfour','fiftyfive','fiftysix','fiftyseven','fiftyeight','fiftynine','sixty',
+        'sixtyone','sixtytwo','sixtythree','sixtyfour','sixtyfive','sixtysix','sixtyseven','sixtyeight','sixtynine','seventy',
+        'seventyone','seventytwo','seventythree','seventyfour','seventyfive','seventysix','seventyseven','seventyeight','seventynine','eighty',
+        'eightyone','eightytwo','eightythree','eightyfour','eightyfive','eightysix','eightyseven','eightyeight','eightynine','ninety'];
+        items1=items.slice()
+        function one1(){
+            k=items1.indexOf(items[rnum])
+            document.getElementById("fin").innerHTML=k+1;           
+            element=document.getElementById(items[rnum]);
+            //k=rnum+1;
+            console.log("numgen",k);
+            //document.getElementById("numgen").innerHTML=k;
+            console.log(rnum);
+            element.style.backgroundColor="yellow";
+            items.splice(rnum,1);
+            console.log(items);
+        }
+        function randomel(){
+            //items=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty'];
+            rnum=Math.floor(Math.random()*items.length);
+            console.log(rnum);
+            one1();
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="one">1</div><div id="two">2</div><div id="three">3</div><div id="four">4</div><div id="five">5</div><div id="six">6</div><div id="seven">7</div><div id="eight">8</div><div id="nine">9</div><div id="ten">10</div><br><br>
+        <div id="eleven">11</div><div id="twelve">12</div><div id="thirteen">13</div><div id="fourteen">14</div><div id="fifteen">15</div><div id="sixteen">16</div><div id="seventeen">17</div><div id="eighteen">18</div><div id="nineteen">19</div><div id="twenty">20</div><br><br>
+        <div id="twentyone">21</div><div id="twentytwo">22</div><div id="twentythree">23</div><div id="twentyfour">24</div><div id="twentyfive">25</div><div id="twentysix">26</div><div id="twentyseven">27</div><div id="twentyeight">28</div><div id="twentynine">29</div><div id="thirty">30</div><br><br>
+        <div id="thirtyone">31</div><div id="thirtytwo">32</div><div id="thirtythree">33</div><div id="thirtyfour">34</div><div id="thirtyfive">35</div><div id="thirtysix">36</div><div id="thirtyseven">37</div><div id="thirtyeight">38</div><div id="thirtynine">39</div><div id="forty">40</div><br><br>
+        <div id="fortyone">41</div><div id="fortytwo">42</div><div id="fortythree">43</div><div id="fortyfour">44</div><div id="fortyfive">45</div><div id="fortysix">46</div><div id="fortyseven">47</div><div id="fortyeight">48</div><div id="fortynine">49</div><div id="fifty">50</div><br><br>
+        <div id="fiftyone">51</div><div id="fiftytwo">52</div><div id="fiftythree">53</div><div id="fiftyfour">54</div><div id="fiftyfive">55</div><div id="fiftysix">56</div><div id="fiftyseven">57</div><div id="fiftyeight">58</div><div id="fiftynine">59</div><div id="sixty">60</div><br><br>
+        <div id="sixtyone">61</div><div id="sixtytwo">62</div><div id="sixtythree">63</div><div id="sixtyfour">64</div><div id="sixtyfive">65</div><div id="sixtysix">66</div><div id="sixtyseven">67</div><div id="sixtyeight">68</div><div id="sixtynine">69</div><div id="seventy">70</div><br><br>
+        <div id="seventyone">71</div><div id="seventytwo">72</div><div id="seventythree">73</div><div id="seventyfour">74</div><div id="seventyfive">75</div><div id="seventysix">76</div><div id="seventyseven">77</div><div id="seventyeight">78</div><div id="seventynine">79</div><div id="eighty">80</div><br><br>
+        <div id="eightyone">81</div><div id="eightytwo">82</div><div id="eightythree">83</div><div id="eightyfour">84</div><div id="eightyfive">85</div><div id="eightysix">86</div><div id="eightyseven">87</div><div id="eightyeight">88</div><div id="eightynine">89</div><div id="ninety">90</div><br><br>
+    </div><br><br><br>
+    <button type="button" onclick="randomel()" id="but"><h1>NEXT</h1></button>
+    <div id="numgen"><h1 id="fin">Number</h1></div><br>
+</body>
+</html>
